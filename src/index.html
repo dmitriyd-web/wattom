@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wattom</title>
+	<meta name="description" content="">
+	<link href="" rel="shortcut icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="menu_toggle">
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#how">How it works ?</a></li>
+            <li><a href="#token">TOKEN TYPES</a></li>
+            <li><a href="#infrastructure">INFRASTRUCTURE</a></li>
+            <li><a href="#faqq">F.A.Q.</a></li>
+            <li><a href="#contacts">CONTACTS</a></li>
+        </ul>
+    </nav>
+    <div class="modal order_modal">
+        <div class="close">
+            <span></span>
+            <span></span>
+        </div>
+        <p class="modal_title">
+            Подпишитесь на новости и получите скидку в 10% при покупке
+        </p>
+        <form>
+            <input type="text" name="name" placeholder="Имя" />
+            <input type="text" name="email" placeholder="Email" />
+            <button type="submit">ПОЛУЧИТЬ СКИДКУ</button>
+        </form>
+    </div>
+    <div class="modal success_modal">
+        <div class="close">
+            <span></span>
+            <span></span>
+        </div>
+        <p class="modal_title">
+            СПАСИБО ЗА ЗАЯВКУ
+        </p>
+        <p class="modal_text">Наш менеджер с Вами связжется</p>
+    </div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="header_toggle">
+                    <button class="header_btn">
+                        <span></span>
+                        <span><span></span><span></span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <a href="/" class="header_logo">
+                    <img src="img/logo.svg" />
+                </a>
+                <div class="header_socials">
+                    <a href="/" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28 6.48528C27.0415 6.90822 26.0142 7.19219 24.9341 7.32109C26.0365 6.66452 26.8835 5.6253 27.2806 4.3887C26.2513 4.99492 25.1064 5.43598 23.8926 5.67364C22.92 4.64247 21.5339 4 20 4C17.0537 4 14.6646 6.37249 14.6646 9.30085C14.6646 9.71574 14.7133 10.1206 14.8045 10.5093C10.3708 10.2877 6.44174 8.17704 3.80952 4.96873C3.34954 5.7542 3.08815 6.66452 3.08815 7.63527C3.08815 9.47406 4.02837 11.0973 5.46099 12.05C4.58561 12.0218 3.76292 11.7821 3.04357 11.3853C3.04357 11.4075 3.04357 11.4297 3.04357 11.4518C3.04357 14.0217 4.88349 16.1626 7.32118 16.652C6.87538 16.7728 6.40324 16.8372 5.91692 16.8372C5.57244 16.8372 5.2381 16.805 4.91185 16.7406C5.59271 18.8452 7.56231 20.3819 9.89463 20.4242C8.07092 21.8461 5.77102 22.692 3.27052 22.692C2.83891 22.692 2.4154 22.6678 2 22.6174C4.35866 24.1239 7.16312 25 10.1763 25C19.9878 25 25.3536 16.9218 25.3536 9.91714C25.3536 9.68754 25.3475 9.45593 25.3394 9.23036C26.381 8.48317 27.2847 7.54867 28 6.48528Z" fill="white"/>
+                        </svg>                            
+                    </a>
+                    <a href="/" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.9752 6.46154C22.5869 4.53967 18.8088 4.21389 18.6471 4.20217C18.3963 4.18108 18.1572 4.3217 18.0541 4.55373C18.0447 4.56779 17.9627 4.75764 17.8713 5.05295C19.451 5.32014 21.3916 5.85686 23.1471 6.9467C23.4283 7.12014 23.515 7.49045 23.3416 7.7717C23.2268 7.95686 23.0322 8.05764 22.8307 8.05764C22.7229 8.05764 22.6127 8.02717 22.5143 7.96623C19.4955 6.09358 15.7268 5.99983 15.0002 5.99983C14.2736 5.99983 10.5025 6.09358 7.48613 7.96623C7.20488 8.14201 6.83457 8.05529 6.66113 7.77404C6.48535 7.49045 6.57207 7.12248 6.85332 6.9467C8.60879 5.8592 10.5494 5.32014 12.1291 5.05529C12.0377 4.75764 11.9557 4.57014 11.9486 4.55373C11.8432 4.3217 11.6064 4.17639 11.3533 4.20217C11.1916 4.21389 7.41348 4.53967 4.99238 6.48733C3.7291 7.65686 1.2002 14.4912 1.2002 20.3998C1.2002 20.5053 1.22832 20.6061 1.27988 20.6975C3.02363 23.7631 7.78379 24.5647 8.86894 24.5998C8.87363 24.5998 8.88066 24.5998 8.88769 24.5998C9.07988 24.5998 9.26035 24.5084 9.37285 24.3537L10.4697 22.8444C7.50957 22.0803 5.99785 20.7819 5.91113 20.7045C5.6627 20.4865 5.63926 20.1069 5.85957 19.8584C6.07754 19.61 6.45723 19.5865 6.70566 19.8045C6.74082 19.8373 9.5252 22.1998 15.0002 22.1998C20.4846 22.1998 23.2689 19.828 23.2971 19.8045C23.5455 19.5889 23.9228 19.61 24.1432 19.8608C24.3611 20.1092 24.3377 20.4865 24.0893 20.7045C24.0025 20.7819 22.4908 22.0803 19.5307 22.8444L20.6275 24.3537C20.74 24.5084 20.9205 24.5998 21.1127 24.5998C21.1197 24.5998 21.1268 24.5998 21.1314 24.5998C22.2166 24.5647 26.9768 23.7631 28.7205 20.6975C28.7721 20.6061 28.8002 20.5053 28.8002 20.3998C28.8002 14.4912 26.2713 7.65686 24.9752 6.46154ZM11.1002 17.9998C9.94004 17.9998 9.0002 16.9264 9.0002 15.5998C9.0002 14.2733 9.94004 13.1998 11.1002 13.1998C12.2604 13.1998 13.2002 14.2733 13.2002 15.5998C13.2002 16.9264 12.2604 17.9998 11.1002 17.9998ZM18.9002 17.9998C17.74 17.9998 16.8002 16.9264 16.8002 15.5998C16.8002 14.2733 17.74 13.1998 18.9002 13.1998C20.0604 13.1998 21.0002 14.2733 21.0002 15.5998C21.0002 16.9264 20.0604 17.9998 18.9002 17.9998Z" fill="white"/>
+                        </svg>                       
+                    </a>
+                    <a href="/" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.5846 4.28869C25.2093 3.95479 24.6199 3.90701 24.0104 4.16374H24.0094C23.3685 4.43359 5.86576 12.3107 5.15324 12.6325C5.02365 12.6798 3.89183 13.1229 4.00841 14.1099C4.11249 14.9998 5.02215 15.3683 5.13323 15.4108L9.58295 17.0095C9.87817 18.0406 10.9665 21.8447 11.2071 22.6574C11.3572 23.1641 11.6019 23.8298 12.0307 23.9668C12.407 24.119 12.7813 23.9799 13.0234 23.7804L15.7439 21.1328L20.1356 24.7265L20.2402 24.7921C20.5384 24.9307 20.8241 25 21.0968 25C21.3075 25 21.5096 24.9585 21.7027 24.8756C22.3607 24.5921 22.6239 23.9342 22.6514 23.8597L25.9318 5.96922C26.132 5.01372 25.8538 4.52756 25.5846 4.28869ZM13.5073 17.6489L12.0062 21.8489L10.5051 16.5989L22.0135 7.6739L13.5073 17.6489Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="/" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6633 14.6807L15.3392 16.7262C15.1535 16.8857 14.8829 16.8857 14.7025 16.7262L12.3784 14.6862L2.88574 23.0003H27.1135L17.6633 14.6807Z" fill="white"/>
+                            <path d="M2 5.57422V22.3784L11.5563 13.9763L2 5.57422Z" fill="white"/>
+                            <path d="M2.88574 4.95312L14.9996 15.6042L27.1135 4.95312H2.88574Z" fill="white"/>
+                            <path d="M18.4434 13.9763L27.9997 22.3784V5.57422L18.4434 13.9763Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header_discount">
+                    <p>TAKE discount 10% </p>
+                </div>
+                <div class="header_language">
+                    <p class="header_language--current">EN</p>
+                    <ul>
+                        <li><p>RU</p></li>
+                        <li><p>SP</p></li>
+                        <li><p>GE</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="main_title">
+                    <h1>Wattom</h1>
+                    <h2>Distributed nanohub based data centers provider</h2>
+                    <a href="#mission"><img src="img/scroll.svg"><span>SCROLL DOWN</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mission" id="mission">
+        <div class="container">
+            <div class="row">
+                <div class="table">
+                    <div class="left_side">
+                        <h2>OUR<br>Mission</h2>
+                    </div>
+                    <div class="right_side">
+                        <div class="right_side--item">
+                            <p>Provide distributed flexible infrastructure and corresponding unified service to rollout
+                                various computational units from micro-servers up to powerful miners and full fledged
+                                servers for the global level competitive costs</p>
+                        </div>
+                        <div class="right_side--item">
+                            <p>Make most powerful cloud-computing network to support perspective decentralized
+                                technologies for web 3.0</p>
+                        </div>
+                        <div class="right_side--item">
+                            <p>Create DAO (Decentralized Autonomous Organization) to break limits of growth and
+                                expand unified nanohub-based services worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="content">
+        <section class="content_vision" id="vision">
+            <div class="content_vision--title">
+                <div class="container">
+                    <div class="row">
+                        <img class="vision_1" src="img/content-bg-1.png" />
+                        <h2>Our Vision</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content_vision--slider">
+                <div class="container">
+                    <div class="row">
+                        <img class="vision_2" src="img/content-bg-2.png" />
+                        <div class="slider_image">
+                            <img class="slide slide-1 active" src="img/vision-1.png" />
+                            <img class="slide slide-2" src="img/vision-1.png" />
+                            <img class="slide slide-3" src="img/vision-1.png" />
+                            <img class="slide slide-4" src="img/vision-1.png" />
+                            <img class="slide slide-5" src="img/vision-1.png" />
+                        </div>
+                        <div class="slider_info">
+                            <div class="slider_info--text">
+                                <h3>
+                                    <span class="active">Green Energy</span>
+                                    <span>Заголовок 2</span>
+                                    <span>Заголовок 3</span>
+                                    <span>Заголовок 4</span>
+                                    <span>Заголовок 5</span>
+                                </h3>
+                                <p>
+                                    <span class="active">We believe, that the green and renewable energy in the key 
+                                    to drive humankind to the prosperity and that is why we are going to place our nanohubs around hydro, wind or nuclear plants to get access green energy sources.
+                                    </span>
+                                    <span>Текст 2</span>
+                                    <span>Текст 3</span>
+                                    <span>Текст 4</span>
+                                    <span>Текст 5</span>
+                                </p>
+                                <div class="slider_arrows">
+                                    <img src="img/arrow-left.svg" class="slide_prev" />
+                                    <img src="img/arrow-right.svg" class="slide_next" />
+                                </div>
+                            </div>
+                            <div class="slider_info--list">
+                                <div class="list_scroll">
+                                    <a data-slide-vision="1" class="active">Green Energy</a>
+                                    <a data-slide-vision="2">Provable</a>
+                                    <a data-slide-vision="3">Undastanding</a>
+                                    <a data-slide-vision="4">Stability</a>
+                                    <a data-slide-vision="5">Mining</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="last_discount">
+                <div class="container">
+                    <div class="row">
+                        <img class="vision_3" src="img/content-bg-3.png" />
+                        <div class="last_discount--title">
+                            <h2>Subscribe to OUR news
+                                and get a <span>10% discount </span>
+                                on your purchase</h2>
+                        </div>
+                        <div class="last_discount--link">
+                            <a href="/">
+                                <span>TAKE discount </span>
+                                <img src="img/arrow-corner-white.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content_how" id="how">
+            <img class="vision_4" src="img/content-bg-4.png" />
+            <div class="content_how--title">
+                <div class="container">
+                    <div class="row">
+                        
+                        <h2>How <br>it works ?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content_how--video">
+                <!--
+                <img class="vision_5" src="img/content-bg-5.png" />
+                -->
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="video_content">
+                            <video id="video" controls="controls" poster="img/nanohob-video.png">
+                                <source src="video/photo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                            </video>
+                        </div>
+                        <!--
+                        <div class="video_play">
+                            <img src="img/nanohob-video.png" />
+                        </div>
+                    -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content_infrastructure">
+            <div class="container">
+                <div class="row">
+
+                    <div class="content_infrastructure--images">
+                        <div class="item_elem">
+                            <p class="elem_name">SHELFS</p>
+                            <img src="img/shelfs.svg" />
+                        </div>
+                        <div class="item_elem">
+                            <p class="elem_name">RACKS</p>
+                            <img src="img/racks.svg" />
+                        </div>
+                    </div>
+                    <div class="content_infrastructure--info">
+                        <h3>Infrastructure</h3>
+                        <p>В этом разделе можно написать о том, что компания Wattom предоставляет два варианта (форм-фактора) размещения оборудования: полки и рельсы. Также можно указать их фундаментальные отличия и/или случаи для которых больше подходит каждый из вариантов.</p>
+                        <p>Помимо этого можно указать, что процесс выбора осуществляется при помощи пошагового визарда</p>
+                    </div>
+                    <div class="content_infrastructure--info">
+                        <h3>Площадки</h3>
+                        <p>Описать по каким принципам формируются контейнеры на площадках. Какие площадки уже имеются, а какие рассматриваются в качестве потенциальных. На какие данные следует обратить внимание.</p>
+                        <p>Each nanohub has duplication of every system: internet connectivity, power control units, sensors (temperature, heat zones and inflammation areas), CO2-based fire extinguishing, surveillance.</p>
+                    </div>
+                    <div class="content_infrastructure--cities">
+                        <p class="citi_current"><span>STAVROPOL</span></p>
+                        <p>CHErnobyl</p>
+                        <p>fokusima</p>
+                        <p>bilibino</p>
+                    </div>
+                    <div class="content_infrastructure--image">
+                        <img src="img/nanohob.png" />
+                    </div>
+                    <div class="content_infrastructure--info">
+                        <h3>Нанохабы</h3>
+                        <p>Здесь стоит коротко написать об особенностях выбора и оплаты нанохабов. Что принцип выбора похож на выбор и бронирование места в кинотеатре. </p>
+                        <p>Wattom time-to-time preparing and releases future nanohub projects (facilities) and allowing users to buy (or reserve) future slot or slots.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content_table" id="token">
+            <div class="container">
+                <div class="row">
+                    <div class="table_block">
+                        <div class="table_title">
+                            <h3>Wattom is the tokenized company and&nbsp;there are 2 types of tokens exists:</h3>
+                        </div>
+                        <div class="table_col">
+                            <h3>Slot token</h3>
+                            <p>Subtyped to “power shelf slot” for non-standard (for example mining) equipment and “1U/2U rack shelf” for 1 or 2 units server cases</p>
+                        </div>
+                        <div class="table_col">
+                            <h3>Power token</h3>
+                            <p>Сonvertible electricity in kW*h</p>
+                        </div>
+                        <div class="table_title">
+                            <p>To get hosted user needs to buy Slot token from the Wattom or on the secondary
+                                market</p>
+                        </div>
+                        <div class="table_col">
+                            <ul>
+                                <li>Each Slot token gives the right to place selected\existing\new equipment into
+                                    corresponding slot in the corresponding anohub.</li>
+                                <li>Each Slot token is emitted as a Non Fungible Token (NFT) and contains limited
+                                    amount of Power tokens locked within (this amount will be used to cover future fees).</li>
+                            </ul>
+                        </div>
+                        <div class="table_col">
+                            <ul>
+                                <li>Each Power token is the regular divisible token and represents kW*h - power consumption - and used as means of fee compensation for the service provided; once Power token or its any part is utilized (used in the transaction to pay for the service), this part is irreversibly burned.</li>
+                                <li>Power token can be bought in the open market to guarantee buyer future fixed fees
+                                    coverage (up to 50% of fees of the service provided) (Similar principal to iTunes
+                                    cards).</li>
+                                <li>Power tokens emission is based on:<br><br>
+                                    Wattom open new nanohub typed facility (one of two types, mentioned above)<br><br>
+
+                                    Depending on the facility to be commissioned and equipment to be deployed
+                                    the power future consumption calculations will take place, and bundle
+                                    calculation formula is: <br>
+                                    <strong>PJ = E * Pw * 24 * 30 * 365</strong> where:<br>
+                                    <strong>PJ</strong> - “power jar” or emission bundle of Power tokens<br>
+                                    <strong>E</strong> - number of equipment<br>
+                                    <strong>Pw</strong> - power consumption by each device in kW*h
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="table_title">
+                            <p>Power and Slot tokens are pure utility tokens and can be traded freely on the open
+                                secondary market
+                                </p>
+                        </div>
+                        <div class="table_title">
+                            <p>Sole emitent of the Power and Slot tokens is Wattom and emission is backed by:</p>
+                        </div>
+                        <div class="table_col">
+                            <ul>
+                                <li>Slot tokens represents physical capacity (cell) in the corresponding nanohub
+                                    and strictly bounded to the existing or planned facility</li>
+                            </ul>
+                        </div>
+                        <div class="table_col">
+                            <ul>
+                                <li>Power tokens represents available and provable free power capacity, that
+                                    can be used in future for the fees coverage (when planned facility will be commissioned) (details of services inside power token unit will be written in
+                                    detail)</li>
+                            </ul>
+                        </div>
+                        <div class="table_collapse">
+                            collapse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="infrastructure" id="infrastructure">
+            <div class="container">
+                <div class="row">
+                    <div class="infrastructure_text">
+                        <h2 class="infrastructure_text--title">Infrastructure</h2>
+                        <p>Our infrastructure is based on the network of geographically distributed nanohubs and each nanohub is small, self-sustainable, highly secured, almost autonomous and high-end equipped mobile facility able to host various kinds of user’s computational hardware. </p>
+                        <p>Including: generic\common multi-processor units, specialized multi-chip\-processor units, AI-processor based units, photonic processor based units.</p>
+                    </div>
+                    <div class="infrastructure_locations">
+                        <div class="locations_item locations_item--title">
+                            <h2>NANOHUBS LOCATIONS</h2>
+                            <img src="img/maps_navigation_icon.png" />
+                        </div>
+                        <div class="locations_item">
+                            <p>Stavropol, Stavropol region, Russia</p>
+                        </div>
+                        <div class="locations_item">
+                            <p>Kalinin NPP Tver Region, 380 km from MKAD</p>
+                        </div>
+                        <div class="locations_item">
+                            <p>Kalinin NPP Tver Region, 380 km from MKAD</p>
+                        </div>
+                        <div class="locations_item">
+                            <p>Kalinin NPP Tver Region, 380 km from MKAD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="last">
+        <section class="last_images">
+            <div class="container">
+                <div class="row">
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-1.png">
+                        <img src="img/slide-1.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-2.png">
+                        <img src="img/slide-2.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-3.png">
+                        <img src="img/slide-3.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-4.png">
+                        <img src="img/slide-4.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-5.png">
+                        <img src="img/slide-5.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-6.png">
+                        <img src="img/slide-6.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-7.png">
+                        <img src="img/slide-7.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-8.png">
+                        <img src="img/slide-8.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-9.png">
+                        <img src="img/slide-9.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-10.png">
+                        <img src="img/slide-10.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-11.png">
+                        <img src="img/slide-11.png" />
+                    </a>
+                    <a class="last_images--item" data-fancybox="gallery" data-src="img/slide-12.png">
+                        <img src="img/slide-12.png" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="last_faq" id=""faq>
+            <div class="container">
+                <div class="row">
+                    <div class="last_faq--accordion">
+                        <div class="accordion_title">
+                            <p>F.A.Q.</p>
+                        </div>
+                        <div class="accordion_item">
+                            <div class="accordion_item--title">
+                                <p>What is Wattom?</p>
+                                <div class="open_item">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="accordion_item--info">Provide distributed flexible infrastructure and corresponding unified service to rollout
+                                various computational units from micro-servers up to powerful miners and full fledged
+                                servers for the global level competitive costs</p>
+                        </div>
+                        <div class="accordion_item">
+                            <div class="accordion_item--title">
+                                <p>Why is Wattom using crypto-tokens to drive processes?</p>
+                                <div class="open_item">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="accordion_item--info">Provide distributed flexible infrastructure and corresponding unified service to rollout
+                                various computational units from micro-servers up to powerful miners and full fledged
+                                servers for the global level competitive costs</p>
+                        </div>
+                        <div class="accordion_item">
+                            <div class="accordion_item--title">
+                                <p>What types of crypro-tokens exist?   </p>
+                                <div class="open_item">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="accordion_item--info">Provide distributed flexible infrastructure and corresponding unified service to rollout
+                                various computational units from micro-servers up to powerful miners and full fledged
+                                servers for the global level competitive costs</p>
+                        </div>
+                        <div class="accordion_item">
+                            <div class="accordion_item--title">
+                                <p>How many slot tokens exist How does emission work?</p>
+                                <div class="open_item">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="accordion_item--info">Provide distributed flexible infrastructure and corresponding unified service to rollout
+                                various computational units from micro-servers up to powerful miners and full fledged
+                                servers for the global level competitive costs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="last_discount">
+            <div class="container">
+                <div class="row">
+                    <div class="last_discount--title">
+                        <h2>Subscribe to OUR news
+                            and get a <span>10% discount </span>
+                            on your purchase</h2>
+                    </div>
+                    <div class="last_discount--link">
+                        <a href="/">
+                            <span>TAKE discount </span>
+                            <img src="img/arrow-corner-blue.svg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="last_footer"id="сontacts" >
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <img src="img/logo.svg">
+                    </div>
+                    <div class="links">
+                        <a href="/">Infrastructure</a>
+                        <a href="/">Education</a>
+                        <a href="/">About Us</a>
+                    </div>
+                    <div class="links">
+                        <a href="/">Blog</a>
+                        <a href="/">Help (F.A.Q.)</a>
+                        <a href="/">Contacts</a>
+                    </div>
+                    <div class="info">
+                        <a href="tel:88000000000" class="info_phone">8 800 000-00-00</a>
+                        <a href="mailto:info@watton.com" class="info_mail">info@watton.com</a>
+                        <div class="info_socials">
+                            <a href="/" target="_blank">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28 6.48528C27.0415 6.90822 26.0142 7.19219 24.9341 7.32109C26.0365 6.66452 26.8835 5.6253 27.2806 4.3887C26.2513 4.99492 25.1064 5.43598 23.8926 5.67364C22.92 4.64247 21.5339 4 20 4C17.0537 4 14.6646 6.37249 14.6646 9.30085C14.6646 9.71574 14.7133 10.1206 14.8045 10.5093C10.3708 10.2877 6.44174 8.17704 3.80952 4.96873C3.34954 5.7542 3.08815 6.66452 3.08815 7.63527C3.08815 9.47406 4.02837 11.0973 5.46099 12.05C4.58561 12.0218 3.76292 11.7821 3.04357 11.3853C3.04357 11.4075 3.04357 11.4297 3.04357 11.4518C3.04357 14.0217 4.88349 16.1626 7.32118 16.652C6.87538 16.7728 6.40324 16.8372 5.91692 16.8372C5.57244 16.8372 5.2381 16.805 4.91185 16.7406C5.59271 18.8452 7.56231 20.3819 9.89463 20.4242C8.07092 21.8461 5.77102 22.692 3.27052 22.692C2.83891 22.692 2.4154 22.6678 2 22.6174C4.35866 24.1239 7.16312 25 10.1763 25C19.9878 25 25.3536 16.9218 25.3536 9.91714C25.3536 9.68754 25.3475 9.45593 25.3394 9.23036C26.381 8.48317 27.2847 7.54867 28 6.48528Z" fill="white"/>
+                                </svg>                            
+                            </a>
+                            <a href="/" target="_blank">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.9752 6.46154C22.5869 4.53967 18.8088 4.21389 18.6471 4.20217C18.3963 4.18108 18.1572 4.3217 18.0541 4.55373C18.0447 4.56779 17.9627 4.75764 17.8713 5.05295C19.451 5.32014 21.3916 5.85686 23.1471 6.9467C23.4283 7.12014 23.515 7.49045 23.3416 7.7717C23.2268 7.95686 23.0322 8.05764 22.8307 8.05764C22.7229 8.05764 22.6127 8.02717 22.5143 7.96623C19.4955 6.09358 15.7268 5.99983 15.0002 5.99983C14.2736 5.99983 10.5025 6.09358 7.48613 7.96623C7.20488 8.14201 6.83457 8.05529 6.66113 7.77404C6.48535 7.49045 6.57207 7.12248 6.85332 6.9467C8.60879 5.8592 10.5494 5.32014 12.1291 5.05529C12.0377 4.75764 11.9557 4.57014 11.9486 4.55373C11.8432 4.3217 11.6064 4.17639 11.3533 4.20217C11.1916 4.21389 7.41348 4.53967 4.99238 6.48733C3.7291 7.65686 1.2002 14.4912 1.2002 20.3998C1.2002 20.5053 1.22832 20.6061 1.27988 20.6975C3.02363 23.7631 7.78379 24.5647 8.86894 24.5998C8.87363 24.5998 8.88066 24.5998 8.88769 24.5998C9.07988 24.5998 9.26035 24.5084 9.37285 24.3537L10.4697 22.8444C7.50957 22.0803 5.99785 20.7819 5.91113 20.7045C5.6627 20.4865 5.63926 20.1069 5.85957 19.8584C6.07754 19.61 6.45723 19.5865 6.70566 19.8045C6.74082 19.8373 9.5252 22.1998 15.0002 22.1998C20.4846 22.1998 23.2689 19.828 23.2971 19.8045C23.5455 19.5889 23.9228 19.61 24.1432 19.8608C24.3611 20.1092 24.3377 20.4865 24.0893 20.7045C24.0025 20.7819 22.4908 22.0803 19.5307 22.8444L20.6275 24.3537C20.74 24.5084 20.9205 24.5998 21.1127 24.5998C21.1197 24.5998 21.1268 24.5998 21.1314 24.5998C22.2166 24.5647 26.9768 23.7631 28.7205 20.6975C28.7721 20.6061 28.8002 20.5053 28.8002 20.3998C28.8002 14.4912 26.2713 7.65686 24.9752 6.46154ZM11.1002 17.9998C9.94004 17.9998 9.0002 16.9264 9.0002 15.5998C9.0002 14.2733 9.94004 13.1998 11.1002 13.1998C12.2604 13.1998 13.2002 14.2733 13.2002 15.5998C13.2002 16.9264 12.2604 17.9998 11.1002 17.9998ZM18.9002 17.9998C17.74 17.9998 16.8002 16.9264 16.8002 15.5998C16.8002 14.2733 17.74 13.1998 18.9002 13.1998C20.0604 13.1998 21.0002 14.2733 21.0002 15.5998C21.0002 16.9264 20.0604 17.9998 18.9002 17.9998Z" fill="white"/>
+                                </svg>                       
+                            </a>
+                            <a href="/" target="_blank">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.5846 4.28869C25.2093 3.95479 24.6199 3.90701 24.0104 4.16374H24.0094C23.3685 4.43359 5.86576 12.3107 5.15324 12.6325C5.02365 12.6798 3.89183 13.1229 4.00841 14.1099C4.11249 14.9998 5.02215 15.3683 5.13323 15.4108L9.58295 17.0095C9.87817 18.0406 10.9665 21.8447 11.2071 22.6574C11.3572 23.1641 11.6019 23.8298 12.0307 23.9668C12.407 24.119 12.7813 23.9799 13.0234 23.7804L15.7439 21.1328L20.1356 24.7265L20.2402 24.7921C20.5384 24.9307 20.8241 25 21.0968 25C21.3075 25 21.5096 24.9585 21.7027 24.8756C22.3607 24.5921 22.6239 23.9342 22.6514 23.8597L25.9318 5.96922C26.132 5.01372 25.8538 4.52756 25.5846 4.28869ZM13.5073 17.6489L12.0062 21.8489L10.5051 16.5989L22.0135 7.6739L13.5073 17.6489Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="/" target="_blank">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.6633 14.6807L15.3392 16.7262C15.1535 16.8857 14.8829 16.8857 14.7025 16.7262L12.3784 14.6862L2.88574 23.0003H27.1135L17.6633 14.6807Z" fill="white"/>
+                                    <path d="M2 5.57422V22.3784L11.5563 13.9763L2 5.57422Z" fill="white"/>
+                                    <path d="M2.88574 4.95312L14.9996 15.6042L27.1135 4.95312H2.88574Z" fill="white"/>
+                                    <path d="M18.4434 13.9763L27.9997 22.3784V5.57422L18.4434 13.9763Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rights-politics">
+                        <p class="footer_rights">© 2022 Wattom. All Rights reserved</p>
+                        <a href="/" target="_blank" class="footer_politics">Privacy & Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--
+    <script src="js/jquery-3.5.1.min.js"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
